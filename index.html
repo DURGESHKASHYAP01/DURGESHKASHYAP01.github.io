@@ -5,43 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Under Construction</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass-box {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 50px;
       text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      color: #fff;
     }
-    .container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+
     h1 {
-      font-size: 2.5rem;
-      color: #333;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
+
     p {
       font-size: 1.2rem;
-      color: #777;
-    }
-    .gear {
-      font-size: 4rem;
-      color: #ff9800;
-      margin: 20px 0;
+      color: #f1f1f1;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="gear">⚙️</div>
-    <h1>Website Under Construction</h1>
-    <p>We're working hard to bring something amazing. Please check back soon!</p>
+  <div class="glass-box">
+    <h1>🚧 Under Construction</h1>
+    <p>Our website is currently undergoing improvements.<br>Please check back soon!</p>
   </div>
 </body>
 </html>
